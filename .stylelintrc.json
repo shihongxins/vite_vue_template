@@ -1,0 +1,114 @@
+{
+  "plugins": ["stylelint-order"],
+  "extends": [
+    "stylelint-config-prettier",
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-standard-vue/scss"
+  ],
+  "rules": {
+    "no-empty-source": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "value-keyword-case": null,
+    "declaration-block-trailing-semicolon": null,
+    "scss/dollar-variable-pattern": [
+      "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "severity": "warning",
+        "message": "Expected variable to be kebab-case"
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "at-variables",
+      "declarations",
+      "rules",
+      {
+        "type": "rule",
+        "selector": "/^&/"
+      },
+      {
+        "type": "rule",
+        "selector": "/^&:\\w/"
+      },
+      "at-rules",
+      {
+        "type": "at-rule",
+        "hasBlock": true
+      },
+      "less-mixins"
+    ],
+    "order/properties-order": [
+      {
+        "groupName": "Position",
+        "properties": ["position", "top", "right", "bottom", "left", "z-index", "float", "clear"]
+      },
+      {
+        "groupName": "LayoutItem",
+        "properties": ["order", "flex", "place-self"]
+      },
+      {
+        "groupName": "LayoutContainer",
+        "properties": ["display", "flex-flow", "place-content", "place-items"]
+      },
+      {
+        "groupName": "Box",
+        "properties": [
+          "box-sizing",
+          "outline",
+          "margin",
+          "border",
+          "border-radius",
+          "padding",
+          "max-width",
+          "max-height",
+          "width",
+          "height",
+          "min-width",
+          "min-height",
+          "overflow",
+          "box-shadow"
+        ]
+      },
+      {
+        "groupName": "Text",
+        "properties": [
+          "content",
+          "font",
+          "line-height",
+          "vertical-align",
+          "letter-spacing",
+          "word-spacing",
+          "text-indent",
+          "text-align",
+          "text-overflow",
+          "text-shadow"
+        ]
+      },
+      {
+        "groupName": "Appearance",
+        "properties": [
+          "visibility",
+          "background",
+          "background-color",
+          "background-image",
+          "color",
+          "filter",
+          "backdrop-filter",
+          "opacity"
+        ]
+      },
+      {
+        "groupName": "Interaction",
+        "properties": ["resize", "user-select", "transition", "animation"]
+      }
+    ]
+  }
+}

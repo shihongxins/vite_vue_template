@@ -1,0 +1,6 @@
+/**/*.{js,ts,cjs,mjs}
+/**/*.{jpg,png,icon,svg}
+*.min.*
+node_modules
+dist
+test
