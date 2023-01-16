@@ -11,3 +11,6 @@ src/lib*/third*
 *.min.*
 # Ignore files with .css, .sass, .scss, .less in src
 src/**/*.*ss
+
+# Ignore .d.ts in javascript project
+# *.d.ts

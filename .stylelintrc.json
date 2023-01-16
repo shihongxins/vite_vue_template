@@ -16,6 +16,13 @@
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
     "value-keyword-case": null,
+    "selector-class-pattern": null,
+    "declaration-colon-newline-after": [
+      "always-multi-line",
+      {
+        "severity": "warning"
+      }
+    ],
     "declaration-block-trailing-semicolon": null,
     "scss/dollar-variable-pattern": [
       "^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$",

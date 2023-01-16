@@ -1,6 +1,1 @@
-{
-  "*.*": "prettier --write",
-  "*.{vue,jsx,tsx}": ["stylelint", "eslint"],
-  "*.{js,cjs,ts}": "eslint",
-  "*.{css,scss,sass,less}": "stylelint",
-}
+{ "*.*": "prettier --write", "*.{.vue,.js,.cjs,.jsx,.ts,.tsx}": "eslint", "*.{css,scss,sass,less,vue}": "stylelint" }

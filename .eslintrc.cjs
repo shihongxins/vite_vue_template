@@ -16,5 +16,8 @@ module.exports = {
     "no-var": "error",
     "no-debugger": "warn",
     semi: ["error", "always"],
+    "vue/multi-word-component-names": "off",
+    "vue/no-deprecated-v-bind-sync": "warn",
+    "vue/no-deprecated-v-on-native-modifier": "warn",
   },
 };
