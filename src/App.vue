@@ -3,18 +3,27 @@
 </script>
 
 <template>
-  <div>
+  <div class="logo-container">
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <img src="./assets/svgs/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG" target="_blank">
+      <SVGIcon class="logo svg" icon="disc" size="6em" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue + SVG" />
 </template>
 
 <style scoped>
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .logo {
     padding: 1.5em;
     height: 6em;

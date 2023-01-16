@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import eslintPlugin from "vite-plugin-eslint";
 import stylelintPlugin from "vite-plugin-stylelint";
 import path from "path";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -15,6 +16,12 @@ export default defineConfig(({ mode }) => {
         include: ["src/**/*.{vue,js,ts,jsx,tsx}"],
       }),
       stylelintPlugin(),
+      createSvgIconsPlugin({
+        // 指定需要缓存的图标文件夹
+        iconDirs: [path.resolve(process.cwd(), "src/assets/svgs")],
+        // 指定需要缓存的图标文件夹
+        symbolId: "icon-[dir]-[name]",
+      }),
     ],
     preprocessorOptions: {
       scss: {
